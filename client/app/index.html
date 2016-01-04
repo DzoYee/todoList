@@ -1,12 +1,26 @@
-/*___________________index____________________*/
+<!--___________________index.html____________________-->
 <!DOCTYPE html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Shortly</title>
-    <link rel="stylesheet" type="text/css" href="styles/style.css" />
-  </head>
-  <body>
-    
+  <html ng-app = 'todoList'>
+    <head>
+      <meta charset="utf-8" />
+      <title>Shortly</title>
+      <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    </head>
+    <body>
+      <h1> ToBluePrint </h1>
+      <div class = 'nav'> Navigation </div>
 
-    <script src="/bower_components/angular/angular.js"></script>
-  </body>
+      <div ng-view ></div>
+      <input ng-model = 'print'>
+      <button ng-click = 'somefunction'>Submit</button>
+
+      <div class ='container'> Prints </div>
+      <ul ng-repeater = >
+        <li>
+      </ul>
+      
+
+      <script src="/bower_components/angular/angular.js"></script>
+      <script src="app/app.js"></script>
+    </body>
+  </html>
