@@ -6,11 +6,12 @@ angular.module('todoList',[
 .config(function($routeProvider){
   $routeProvider
   .when('/plan', {
-    templateUrl: 'plan/plan.html',
+    templateUrl: 'app/plan/plan.html',
     controller: 'PlanCtrl'
   })
   .when('/list', {
-    templateUrl: 'list/list.html',
+    templateUrl: 'app/list/list.html',
     controller: 'ListCtrl'
-  });
+  })
+  .otherwise({redirectTo: '/list'});
 });

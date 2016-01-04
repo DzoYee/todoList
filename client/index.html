@@ -1,24 +1,28 @@
 <!--___________________index.html____________________-->
 <!DOCTYPE html>
-  <html ng-app = 'todoList'>
+  <html ng-app ='todoList'>
     <head>
       <meta charset="utf-8" />
       <title>Shortly</title>
-      <link rel="stylesheet" type="text/css" href="styles/style.css" />
-      <script src="/bower_components/angular/angular.js"></script>
-      <script src="/bower_components/angular/angular-route/angular-route.js"></script>
-      <script src="app/app.js"></script>
+      <link rel="stylesheet" type="text/css" href="" />
     </head>
     <body>
-      <a href="../#/list">Go to List</a>
-      <a href="../#/plan">Go to Plan</a>
+      
       <h1> ToBluePrint </h1>
-      <div class = 'nav'> Navigation </div>
+      <div class = 'nav'>
+        <a href="#/list">Go to List</a>
+        <a href="#/plan">Go to Plan</a>  
+      </div>
 
       <!--___________Templates___________-->
       <div ng-view ></div>
 
       
+      <script src="/bower_components/angular/angular.js"></script>
+      <script src="/bower_components/angular-route/angular-route.js"></script>
+      <script src="app/list/list.js"></script>
+      <script src="app/plan/plan.js"></script>
+      <script src="app/app.js"></script>
 
     </body>
   </html>
