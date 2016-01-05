@@ -8,4 +8,5 @@ angular.module('todoList.list', [])
       }
     };
     getAll();
+    console.log($scope.plans);
   });

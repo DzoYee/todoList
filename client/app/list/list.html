@@ -4,7 +4,9 @@
 <div class ='container'> Prints List </div>
   <div ng-repeat = 'plan in plans'>
     <span class='goal'>{{ plan.goal }}</span>
-    <span class='subgoal'>{{ plan.subgoal1 }}</span>
-    <span class='subgoal'>{{ plan.subgoal2 }}</span>
+    <div ng-repeat = '(key, value) in plan.subgoals'>
+      <span>{{ value }}<span>
+    </div>
+    
   </div>  
 </div>
