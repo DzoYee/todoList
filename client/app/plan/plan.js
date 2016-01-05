@@ -2,18 +2,29 @@
 angular.module('todoList.plan', [])
   .controller('PlanCtrl', function($scope, Plan) {
     $scope.plans = [];
+    $scope.goalForms = [{}];
+    $scope.subgoals = {};
+
+
+    $scope.addSubgoal = function(){
+      $scope.goalForms.push({id: "subgoal" + $scope.subgoals.length});
+    };  
     $scope.addPlan = function() {
       //Add task data into tasks array
-      var plan = {
-        goal: $scope.newPlan,
-        subgoal1: $scope.subgoal1,
-        subgoal2: $scope.subgoal2
-      };
-      $scope.plans.push(plan);
+      $scope.plans.push($scope.createPlan());
 
       //Save somewhere where all controllers can access
-      Plan.addPlan(plan);
-
+      Plan.addPlan($scope.createPlan());
     };
+
+    $scope.createPlan = function() {
+      var plan = { goal: $scope.newPlan };
+      for (var prop in $scope.subgoals){
+        plan[prop] = subgoals[prop];
+      }
+      // console.log(plan);
+      return plan;
+    };
+    
 
   });

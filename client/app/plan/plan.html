@@ -3,8 +3,10 @@
   <h1>Plan View</h1>
   <form ng-submit = 'addPlan()'>
     <input placeholder = "Plan" ng-model = 'newPlan'>
-    <input placeholder = "Subgoal" ng-model = 'subgoal1'>
-    <input placeholder = "Subgoal" ng-model = 'subgoal2'>
+    <div ng-repeat = 'goalForm in goalForms'>
+      <input placeholder = "Subgoal" ng-model = 'subgoal[goalForm.id]'>
+      <button ng-show = '$last 'ng-click = 'addSubgoal()'>Add SubGoal</button>
+    </div>  
     <button ng-submit = 'addPlan()'>Submit</button>
   </form>  
 
@@ -12,8 +14,8 @@
   <div class = 'container plans'>
     <div ng-repeat = 'plan in plans'>
       <span class='goal'>{{ plan.goal }}</span>
-      <span class='subgoal'>{{ plan.subgoal1 }}</span>
-      <span class='subgoal'>{{ plan.subgoal2 }}</span>
+        <span class='subgoal'>{{ plan.subgoal1 }}</span>
+        <span class='subgoal'>{{ plan.subgoal2 }}</span>
     </div>  
   </div>
 
