@@ -1,4 +1,5 @@
 angular.module('todoList',[
+  'todoList.services',
   'todoList.list',
   'todoList.plan',
   'ngRoute'

@@ -1,13 +1,15 @@
 <!--___________________plan.html____________________-->
 <div ng-controller = 'PlanCtrl'>
   <h1>Plan View</h1>
-  <input placeholder = "Plan" ng-model = 'newPlan'>
-  <input placeholder = "Subgoal" ng-model = 'subgoal1'>
-  <input placeholder = "Subgoal" ng-model = 'subgoal2'>
-  <button ng-click = 'addPlan()'>Submit</button>
+  <form ng-submit = 'addPlan()'>
+    <input placeholder = "Plan" ng-model = 'newPlan'>
+    <input placeholder = "Subgoal" ng-model = 'subgoal1'>
+    <input placeholder = "Subgoal" ng-model = 'subgoal2'>
+    <button ng-submit = 'addPlan()'>Submit</button>
+  </form>  
 
   <!--________________List_________________________-->
-  <div class = 'containter plans'
+  <div class = 'container plans'>
     <div ng-repeat = 'plan in plans'>
       <span class='goal'>{{ plan.goal }}</span>
       <span class='subgoal'>{{ plan.subgoal1 }}</span>

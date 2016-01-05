@@ -1,5 +1,10 @@
 <!--___________________list.html____________________-->
-<div ng-controller = 'ListCtrl'>
+<div>
 <h1>List View</h1>
 <div class ='container'> Prints List </div>
+  <div ng-repeat = 'plan in plans'>
+    <span class='goal'>{{ plan.goal }}</span>
+    <span class='subgoal'>{{ plan.subgoal1 }}</span>
+    <span class='subgoal'>{{ plan.subgoal2 }}</span>
+  </div>  
 </div>
